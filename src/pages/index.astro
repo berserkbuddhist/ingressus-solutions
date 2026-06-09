@@ -1,0 +1,300 @@
+---
+import '../styles/global.css';
+---
+
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingressus Solutions</title>
+  </head>
+
+  <body class="bg-slate-950 text-white overflow-x-hidden">
+  <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+	<svg
+		data-lines
+		class="absolute inset-0 h-full w-full opacity-50"
+		viewBox="0 0 1920 1080"
+		preserveAspectRatio="none"
+	>
+		{Array.from({ length: 18 }).map((_, i) => (
+		<path
+			d={`M-200 ${260 + i * 34} C 250 ${80 + i * 18}, 520 ${620 - i * 10}, 900 ${420 + i * 16} S 1450 ${160 + i * 24}, 2120 ${360 + i * 22}`}
+			stroke={i % 2 === 0 ? '#00d4ff' : '#a855f7'}
+			stroke-width={i % 3 === 0 ? '1.4' : '0.8'}
+			fill="none"
+			opacity={0.18 + i * 0.018}
+		/>
+		))}
+
+		{Array.from({ length: 14 }).map((_, i) => (
+		<path
+			d={`M${300 + i * 70} -120 C ${120 + i * 40} 220, ${760 - i * 20} 420, ${520 + i * 80} 760 S ${900 + i * 60} 1180, ${1220 + i * 45} 1220`}
+			stroke={i % 2 === 0 ? '#38bdf8' : '#7c3aed'}
+			stroke-width="0.8"
+			fill="none"
+			opacity="0.22"
+		/>
+		))}
+
+		<circle cx="420" cy="640" r="2" fill="#22d3ee" opacity="0.9" />
+		<circle cx="1280" cy="260" r="2" fill="#a855f7" opacity="0.9" />
+		<circle cx="1560" cy="720" r="2" fill="#22d3ee" opacity="0.7" />
+	</svg>
+  </div>
+
+    <main class="relative z-10 min-h-screen">
+    <div class="absolute right-6 top-8 z-50 flex gap-3 text-sm">
+      <a
+        href="/"
+        class="text-cyan-400 hover:text-cyan-300"
+      >
+        HU
+      </a>
+
+      <span class="text-slate-600">|</span>
+
+      <a
+        href="/en"
+        class="text-cyan-400 hover:text-cyan-300"
+      >
+        EN
+      </a>
+    </div>
+      <section class="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 py-20 pt-46">
+      <div class="absolute left-1/2 top-10 -translate-x-1/2">
+        <img
+          src="/logo.png"
+          alt="Ingressus Solutions"
+          class="h-16 w-auto opacity-80 md:h-20"
+        />
+      </div>
+        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+          Automatizáció • Cloud • AI
+        </p>
+
+        <h1 class="max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
+          Kevesebb idő. Optimalizáltabb működés.
+        </h1>
+
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+          Segítünk automatizálni az ismétlődő feladataidat, összekötni a rendszereidet,
+          és olyan felhőalapú megoldásokat kialakítani, amelyek időt és pénzt takarítanak meg számodra.
+        </p>
+
+        <p class="mt-6 max-w-2xl text-lg font-medium text-cyan-300">
+          Nem kell egy teljes alkalmazott költségét a nyakadba venned!
+          <br />
+          Rugalmas árképzésünk garantáltan elnyeri a tetszésedet.
+        </p>
+
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="#contact"
+            class="rounded-full bg-cyan-400 px-6 py-3 text-center font-semibold text-slate-950 transition hover:bg-cyan-300"
+          >
+            Kapcsolatfelvétel
+          </a>
+
+          <a
+            href="#services"
+            class="rounded-full border border-slate-700 px-6 py-3 text-center font-semibold text-white transition hover:border-cyan-400"
+          >
+            Szolgáltatások
+          </a>
+        </div>
+      </section>
+
+      <section id="services" class="mx-auto max-w-6xl px-6 py-20">
+        <h2 class="text-3xl font-bold md:text-4xl">Szolgáltatások</h2>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
+            <h3 class="text-xl font-semibold">
+              Üzleti folyamatok automatizálása
+            </h3>
+
+            <div class="mt-3 h-[2px] w-32 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500"></div>
+
+            <p class="mt-4 text-slate-300">
+              Riportok és táblázatok kezelésének egyedi, igény szerinti automatizálása,
+              amelyek csökkentik a manuális részét a munkának, cserébe gyorsítják a folyamatokat.
+              <br />
+              <br />
+              Engedd, hogy vállalkozásod hatékonyabban működjön!
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
+            <h3 class="text-xl font-semibold">Felhőalapú megoldások</h3>
+
+            <div class="mt-3 h-[2px] w-32 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500"></div>
+
+              <p class="mt-4 text-slate-300">
+                Modern felhőalapú rendszerek tervezése, fejlesztése és üzemeltetése AWS és Google Cloud környezetben.
+                Automatizált infrastruktúra, monitorozás, adatfeldolgozás és skálázható architektúrák kialakítása.
+                <br />
+                <br />
+                Kubernetes, Infrastructure as Code (IaC), Docker, CI/CD és verziókezelési megoldások,
+                amelyek gyorsabbá, biztonságosabbá és hatékonyabbá teszik a fejlesztési és üzemeltetési folyamatokat.
+              </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
+            <h3 class="text-xl font-semibold">AI a gyakorlatban</h3>
+
+            <div class="mt-3 h-[2px] w-32 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500"></div>
+
+              <p class="mt-4 text-slate-300">
+                Dokumentumkereső chatbotok, belső tudásbázisok, AI asszisztensek
+                és egyedi AI megoldások a napi munkafolyamatok optimalizálására.
+
+                <br />
+                <br />
+
+                Segítünk az AI eszközök bevezetésében, a munkatársak betanításában
+                és a hatékony AI használat kialakításában, hogy a technológia valódi
+                üzleti előnyt jelentsen a vállalkozásod számára.
+              </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
+            <h3 class="text-xl font-semibold">Lead gyűjtés konferenciákra</h3>
+
+            <div class="mt-3 h-[2px] w-32 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500"></div>
+
+            <p class="mt-4 text-slate-300">
+                Eleged van a névjegykártyákból és a kontaktok kézi rögzítéséből?
+                Mutatunk egy egyszerűbb megoldást!
+                <br />
+                <br />
+                QR-kódos kapcsolatépítés, gyors adatcsere és azonnali digitális névjegy.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
+            <h3 class="text-xl font-semibold">Bemutatkozó (Landing) weboldal</h3>
+            
+            <div class="mt-3 h-[2px] w-32 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500"></div>
+
+            <p class="mt-4 text-slate-300">
+               Csak egy egyszerű portfólió vagy bemutatkozó weboldalra van szükséged?
+              Megoldjuk!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-6 py-20">
+        <h2 class="text-3xl font-bold md:text-4xl">Kiemelt projektek</h2>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2">
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
+            <h3 class="text-xl font-semibold">QuentryX</h3>
+
+            <p class="mt-4 text-slate-300">
+              Saját fejlesztésű, aktív fejlesztés alatt álló rendezvénykezelő platform.
+              A cél egy olyan rendszer létrehozása, amely egyszerűvé teszi a digitális
+              jegykezelést, a QR-kódos beléptetést és a rendezvények adminisztrációját.
+            </p>
+
+            <span class="mt-6 inline-block rounded-full bg-amber-500/20 px-3 py-1 text-sm font-medium text-amber-300">
+              Fejlesztés alatt
+            </span>
+          </div>
+
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
+            <h3 class="text-xl font-semibold">QR Lead Capture</h3>
+
+            <p class="mt-4 text-slate-300">
+              QR-kód alapú kapcsolatépítési megoldás rendezvényekhez és üzleti eseményekhez,
+              amellyel gyorsan és egyszerűen gyűjtheted be az érdeklődők adatait.
+            </p>
+
+            <a
+              href="https://www.qrleadcapture.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-6 inline-flex font-semibold text-cyan-400 transition hover:text-cyan-300"
+            >
+              QR Lead Capture Weboldala →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="mx-auto max-w-6xl px-6 py-20">
+        <div class="rounded-3xl border border-cyan-400/30 bg-cyan-400/10 p-8">
+          <h2 class="text-center text-3xl font-bold">
+            Van egy ismétlődő feladatod, amit automatizálnál?
+          </h2>
+
+          <p class="mx-auto mt-4 max-w-2xl text-center text-slate-300">
+            Írd meg röviden, miben tudunk segíteni, és felvesszük veled a kapcsolatot.
+          </p>
+
+          <form
+            action="https://formspree.io/f/xgobkodq"
+            method="POST"
+            class="mx-auto mt-10 max-w-2xl space-y-4"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="[Ingressus Solutions] Új kapcsolatfelvétel az oldalról"
+            />
+            <input
+              type="text"
+              name="_gotcha"
+              style="display:none"
+            />
+            <input
+              type="text"
+              name="name"
+              placeholder="Neved"
+              required
+              class="w-full rounded-xl border border-slate-700 bg-slate-900/70 px-4 py-3 text-white placeholder-slate-400 focus:border-cyan-400 focus:outline-none"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail címed"
+              required
+              class="w-full rounded-xl border border-slate-700 bg-slate-900/70 px-4 py-3 text-white placeholder-slate-400 focus:border-cyan-400 focus:outline-none"
+            />
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Röviden írd le, miben tudunk segíteni..."
+              required
+              class="w-full rounded-xl border border-slate-700 bg-slate-900/70 px-4 py-3 text-white placeholder-slate-400 focus:border-cyan-400 focus:outline-none"
+            ></textarea>
+            <button
+              type="submit"
+              class="w-full rounded-xl bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300"
+            >
+              Üzenet küldése
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+	<script>
+	const lines = document.querySelector('[data-lines]');
+
+	window.addEventListener('scroll', () => {
+		const scrollY = window.scrollY;
+
+		if (lines instanceof HTMLElement || lines instanceof SVGElement) {
+		lines.style.transform = `
+			translateY(${scrollY * -0.08}px)
+			translateX(${Math.sin(scrollY * 0.002) * 24}px)
+			rotate(${Math.sin(scrollY * 0.001) * 1.5}deg)
+		`;
+		}
+	});
+	</script>
+
+  </body>
+</html>
